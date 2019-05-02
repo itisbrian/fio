@@ -1,0 +1,29 @@
+SUPREME LOCAL FIO
+SUPREME FIO for LOCAL USE ONLY
+
+NOTE : This scripts in this repo exclude all drives with partitions.
+
+Version: 1.0 Build Date: 4/23/2018
+
+Supports: ppc64le, x86_64
+
+Usage:
+
+Download the entire repo, and unzip it into the same directory.
+ex: wget https://github.com/itisbrian/supremelocal/raw/master/supremelocal-master-042318.zip
+chmod +x * , or chmod u+x _________
+
+./fiobench.sh <outputfile.txt> - bench all available drives. 1M-2M, Read & Write.
+./fiostress.sh <outputfile.txt> - stress all available drives. bs4k, rand R&W .
+./fiofull.sh <benchoutput.txt> <stressoutput.txt> - performs bench + stress.
+
+Default Fio Parameters :
+
+SEQ : NUMJOB=2, RUNTIME=120, IODEPTH=128, BS=1m,2m
+RAND: NUMJOB=*, RUNTIME=12hr, IODEPTH=32, BS=4k
+
+*numjobs calculated based on total cpu threads, max numjob=8.
+
+ 
+
+https://github.com/itisbrian/supremelocal

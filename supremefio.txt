@@ -1,0 +1,34 @@
+SUPREME FIO
+Supreme Fio for Cburn
+
+Version: 1.1 Build Date: 05/14/2018
+
+Supports: x86_64
+
+Patch Notes:
+-FIO Script no longer hosted on 172.16.94.33
+-Changed script names, see usage for details.
+
+Usage:
+
+Warning: THIS SCRIPT WIPES ALL DATA ON DRIVES
+
+RC=http://westworld.bnet/fio/bench.sh - BENCH (8min/drive)
+RC=http://westworld.bnet/fio/stress.sh - STRESS (12 Hrs)
+RC=http://westworld.bnet/fio/fulltest.sh - BENCH + STRESS
+RC=http://westworld.bnet/fio/longstress.sh - LONG STRESS
+
+ex: Cburn-r74 DIR=/yourdirectory RC=http://westworld.bnet/fio/fulltest.sh
+
+Results can be found in the burnin directory.
+
+Default Fio Parameters :
+
+SEQ : NUMJOB=2, RUNTIME=120, IODEPTH=128, BS=1m,2m
+RAND: NUMJOB=*, RUNTIME=12hr, IODEPTH=32, BS=4k
+
+*numjobs calculated based on total cpu threads, max numjob=8.
+
+ 
+
+https://github.com/itisbrian/supremefio
